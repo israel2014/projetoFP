@@ -1,0 +1,13 @@
+bin
+vuild
+include
+lib
+local
+man
+share
+Scripts
+.Python
+*.pyc
+*~
+*.sqlite3
+.DS_Store
