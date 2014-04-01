@@ -1,10 +1,14 @@
-from django.conf.urls import patterns, include, url
+"""
+WSGI config for projetoFP project.
 
-from django.contrib import admin
-admin.autodiscover()
+It exposes the WSGI callable as a module-level variable named ``application``.
 
-urlpatterns = patterns('',
-    url(r'^$', 'pessoas.views.index'),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^pessoas/', include('pessoas.urlsPessoas')),
-)
+For more information on this file, see
+https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
+"""
+
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "projetoFP.settings")
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
