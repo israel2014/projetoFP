@@ -8,3 +8,6 @@ def index(request):
 def pessoaListar(request):
     pessoas = Pessoa.objects.all()[0:10]
     return render(request, 'pessoas/listaPessoas.html', {'pessoas': pessoas})
+
+def pessoaAdicionar(request):
+    return render(request, 'pessoas/formPessoas.html')
