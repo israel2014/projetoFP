@@ -1,4 +1,11 @@
+# This Python file uses the following encoding: utf-8
+"""
+@israel.frp
+https://www.facebook.com/israel.frp
+"""
+
 from django.shortcuts import render, HttpResponseRedirect
+from django.db.models import Q
 from pessoas.models import Pessoa
 
 
@@ -21,10 +28,10 @@ def pessoaSalvar(request):
         except:
             pessoa = Pessoa()
 
-        pessoa.nome = request.POST.get('nome', '')
-        pessoa.email = request.POST.get('email', '')
-        pessoa.telefone = request.POST.get('telefone', '(00) 0-0000-0000')
-        pessoa.logradouro = request.POST.get('logradouro', '')
+        pessoa.nome = request.POST.get('nome', '').upper()
+        pessoa.email = request.POST.get('email', '').upper()
+        pessoa.telefone = request.POST.get('telefone', '(00) 0-0000-0000').upper()
+        pessoa.logradouro = request.POST.get('logradouro', '').upper()
 
         pessoa.save()
         return HttpResponseRedirect('/pessoas/')
