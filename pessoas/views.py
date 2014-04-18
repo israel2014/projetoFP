@@ -13,7 +13,7 @@ def index(request):
     return render(request, 'index.html')
 
 def pessoaListar(request):
-    pessoas = Pessoa.objects.all()[0:10]
+    pessoas = Pessoa.objects.all().order_by('nome')[0:10]
     return render(request, 'pessoas/listaPessoas.html', {'pessoas': pessoas})
 
 def pessoaAdicionar(request):
@@ -34,4 +34,38 @@ def pessoaSalvar(request):
         pessoa.logradouro = request.POST.get('logradouro', '').upper()
 
         pessoa.save()
+    return HttpResponseRedirect('/pessoas/')
+
+def pessoaPesquisar(request):
+    if request.method == 'POST':
+        textoBusca = request.POST.get('textoBusca', 'TUDO').upper()
+
+        try:
+            if textoBusca == 'TUDO':
+                pessoas = Pessoa.objects.all()
+            else:
+                pessoas = Pessoa.objects.filter(
+                    (Q(nome__contains=textoBusca) |
+                    Q(email__contains=textoBusca) |
+                    Q(telefone__contains=textoBusca) |
+                    Q(logradouro__contains=textoBusca))).order_by('nome') #BUSCA POR NOME OU EMAIL OU TELEFONE OU LOGRADOURO... E É ORDENADO POR NOME.
+        except:
+            pessoas = []
+
+        return render(request, 'pessoas/listaPessoas.html', {'pessoas': pessoas, 'textoBusca': textoBusca})
+
+def pessoaEditar(request, pk=0):
+    try:
+        pessoa = Pessoa.objects.get(pk=pk)
+    except:
+        return HttpResponseRedirect('/pessoas/')
+
+    return render(request, 'pessoas/formPessoas.html', {'pessoa': pessoa})
+
+def pessoaExcluir(request, pk=0):
+    try:
+        pessoa = Pessoa.objects.get(pk=pk)
+        pessoa.delete()
+        return HttpResponseRedirect('/pessoas/')
+    except:
         return HttpResponseRedirect('/pessoas/')
