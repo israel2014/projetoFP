@@ -8,5 +8,8 @@ if __name__ == "__main__":
     from django.core.management import execute_from_command_line
 
     execute_from_command_line(sys.argv)
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> 2c5c0fdc608863fa415c4b50c76304f53e54bb5a
