@@ -17,11 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
-SECRET_KEY = 'yr3w=4791kqo*&c!17ssr_&35$j6w1qc+&5wm#^y&clc7e%vf%'
-=======
 SECRET_KEY = 'dqdklo)-&92)v%-yng3+qk@j+_g6xjb2a1%ab-291$!vul-yu@'
->>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -72,11 +68,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-<<<<<<< HEAD
-LANGUAGE_CODE = 'pt-br'
-=======
 LANGUAGE_CODE = 'en-us'
->>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
 
 TIME_ZONE = 'UTC'
 
