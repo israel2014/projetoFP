@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 bin
 build
 include
@@ -11,3 +12,18 @@ Scripts
 .DS_Store
 *.sqlite3
 *.pyc
+=======
+bin
+vuild
+include
+lib
+local
+man
+share
+Scripts
+.Python
+*.pyc
+*~
+*.sqlite3
+.DS_Store
+>>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e

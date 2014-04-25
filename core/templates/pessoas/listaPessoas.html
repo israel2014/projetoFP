@@ -3,7 +3,11 @@
 {% block titulo %}Pessoas{% endblock titulo %}
 
 {% block conteudo %}
+<<<<<<< HEAD
 <div align="center"> 
+=======
+<div align="center">
+>>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
   <form role="form" method="POST" action="/pessoas/pesquisar/">{% csrf_token %}
     <div class="form-group">
       <div class="row">
@@ -14,10 +18,17 @@
           <button type="submit" class="btn btn-primary">Pesquisar <span class="glyphicon glyphicon-search"></span></button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>  
   </form>
   
   <a href="/pessoas/adicionar/" class="btn btn-warning">Cadastra Pessoa</a>
+=======
+    </div>
+  </form>
+  
+  <a href="/pessoas/adicionar/" class="btn btn-warning">Cadastrar Pessoa</a>
+>>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
 
 </div>
 <hr>
@@ -25,7 +36,10 @@
       <table class="table table-striped">
         <thead>
           <tr>
+<<<<<<< HEAD
             <th>Id</th>
+=======
+>>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
             <th>Nome</th>
             <th>E-Mail</th>
             <th>Telefone</th>
@@ -34,14 +48,26 @@
         <tbody>
         {% for pessoa in pessoas %}
           <tr>
+<<<<<<< HEAD
             <td>{{ pessoa.id }}</td>
             <td><a href="/pessoas/editar/{{ pessoa.pk }}">{{ pessoa.nome }}</a></td>
             <td>{{ pessoa.email }}</td>
             <td>{{ pessoa.telefone }}</td>
           </tr>
         {% endfor %}  
+=======
+            <td>{{ pessoa.nome }}</td>
+            <td>{{ pessoa.email }}</td>
+            <td>{{ pessoa.telefone }}</td>
+          </tr>
+        {% endfor %}
+>>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
         </tbody>
       </table>
 </div><!-- FIM TABELA -->
 
+<<<<<<< HEAD
 {% endblock conteudo %}
+=======
+{% endblock conteudo %}
+>>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e

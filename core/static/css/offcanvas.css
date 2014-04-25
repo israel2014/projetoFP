@@ -1,7 +1,13 @@
 /*
+<<<<<<< HEAD
  * Style tweaks
  * --------------------------------------------------
  */
+=======
+* Style tweaks
+* --------------------------------------------------
+*/
+>>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
 html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
@@ -14,9 +20,15 @@ footer {
 }
 
 /*
+<<<<<<< HEAD
  * Off Canvas
  * --------------------------------------------------
  */
+=======
+* Off Canvas
+* --------------------------------------------------
+*/
+>>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
 @media screen and (max-width: 767px) {
   .row-offcanvas {
     position: relative;
