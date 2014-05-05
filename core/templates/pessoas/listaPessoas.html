@@ -3,15 +3,7 @@
 {% block titulo %}Pessoas{% endblock titulo %}
 
 {% block conteudo %}
-<<<<<<< HEAD
 <div align="center"> 
-=======
-<<<<<<< HEAD
-<div align="center"> 
-=======
-<div align="center">
->>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
->>>>>>> 2c5c0fdc608863fa415c4b50c76304f53e54bb5a
   <form role="form" method="POST" action="/pessoas/pesquisar/">{% csrf_token %}
     <div class="form-group">
       <div class="row">
@@ -22,23 +14,10 @@
           <button type="submit" class="btn btn-primary">Pesquisar <span class="glyphicon glyphicon-search"></span></button>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2c5c0fdc608863fa415c4b50c76304f53e54bb5a
     </div>  
   </form>
   
   <a href="/pessoas/adicionar/" class="btn btn-warning">Cadastra Pessoa</a>
-<<<<<<< HEAD
-=======
-=======
-    </div>
-  </form>
-  
-  <a href="/pessoas/adicionar/" class="btn btn-warning">Cadastrar Pessoa</a>
->>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
->>>>>>> 2c5c0fdc608863fa415c4b50c76304f53e54bb5a
 
 </div>
 <hr>
@@ -46,14 +25,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
-<<<<<<< HEAD
             <th>Id</th>
-=======
-<<<<<<< HEAD
-            <th>Id</th>
-=======
->>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
->>>>>>> 2c5c0fdc608863fa415c4b50c76304f53e54bb5a
             <th>Nome</th>
             <th>E-Mail</th>
             <th>Telefone</th>
@@ -62,36 +34,14 @@
         <tbody>
         {% for pessoa in pessoas %}
           <tr>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2c5c0fdc608863fa415c4b50c76304f53e54bb5a
             <td>{{ pessoa.id }}</td>
             <td><a href="/pessoas/editar/{{ pessoa.pk }}">{{ pessoa.nome }}</a></td>
             <td>{{ pessoa.email }}</td>
             <td>{{ pessoa.telefone }}</td>
           </tr>
         {% endfor %}  
-<<<<<<< HEAD
-=======
-=======
-            <td>{{ pessoa.nome }}</td>
-            <td>{{ pessoa.email }}</td>
-            <td>{{ pessoa.telefone }}</td>
-          </tr>
-        {% endfor %}
->>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
->>>>>>> 2c5c0fdc608863fa415c4b50c76304f53e54bb5a
         </tbody>
       </table>
 </div><!-- FIM TABELA -->
 
-<<<<<<< HEAD
 {% endblock conteudo %}
-=======
-<<<<<<< HEAD
-{% endblock conteudo %}
-=======
-{% endblock conteudo %}
->>>>>>> ed271e821956b564a159ec5d478d3e7c31ad071e
->>>>>>> 2c5c0fdc608863fa415c4b50c76304f53e54bb5a
